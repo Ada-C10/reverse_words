@@ -1,10 +1,9 @@
-require 'pry'
 # A method to reverse each word in a sentence, in place.
 def reverse_words(my_words)
 
   unless my_words.nil?
     words = my_words.split(/(\S+)/)
-    
+
     words.map! do |word|
       string_reverse(word)
 
@@ -34,9 +33,3 @@ def string_reverse(my_string)
   return my_string
 
 end
-
-
-test_string = "hello, world"
-reverse_words(test_string)
-
-puts test_string

@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
-require 'pry'
 require_relative '../lib/reverse_words'
 
 describe "reverse words" do
