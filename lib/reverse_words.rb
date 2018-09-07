@@ -2,7 +2,7 @@
 def reverse_words(my_words)
 
   unless my_words.nil?
-    words = my_words.split(/(\S+)/)
+    words = my_words.split(/\b/)
 
     words.map! do |word|
       string_reverse(word)
