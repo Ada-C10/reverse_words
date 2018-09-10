@@ -3,6 +3,9 @@
 # Space Complexity: O(1), aside from a few variables up front and temp,
 # no additional space is used ("in place")
 
+# Consider other algorithms to decrease Time Complexity.
+# Would Time Complexity be a trade off of Space Complexity?
+
 def reverse_words(my_words)
   return nil if my_words == nil
 
