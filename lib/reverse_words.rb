@@ -1,7 +1,7 @@
 # A method to reverse each word in a sentence, in place.
 # Time Complexity: O(n) * O(3n) = O(n^2)
 # Space Complexity: O(1), aside from a few variables up front and temp,
-# no additional space is used ("in place")
+# no additional space is used (swap is happening "in place")
 
 # Consider other algorithms to decrease Time Complexity.
 # Would Time Complexity be a trade off of Space Complexity?
