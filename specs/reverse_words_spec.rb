@@ -21,7 +21,6 @@ describe "reverse words" do
     end
   end
 
-  # check for edge cases
   describe "edge cases" do
     # if it's a string parameter, check for empty
     it "reverse each word in an empty sentence" do
@@ -48,7 +47,7 @@ describe "reverse words" do
 
       test_string.must_equal "a b c d e f g h ? 1 2 4"
     end
-
+  
     it "reverse each word in a sentence with multiple words of varying lengths" do
       test_string = "I strive to engineer the most efficient solutions."
 
