@@ -32,3 +32,6 @@ def reverse_words(my_words)
 
   return my_words
 end
+
+# Time complexity: linear
+# Space complexity: constant
