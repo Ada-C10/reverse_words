@@ -2,6 +2,10 @@
 def reverse_words(my_words)
   # EXAMPLE: my_words = "I can be an engineer"
 
+  if my_words == nil
+    return nil
+  end
+
   if my_words.length == 0
     return nil
   end
@@ -43,26 +47,25 @@ def reverse_words(my_words)
     k += 1
   end
 
-  # Putting spaces between the 'smooshed_words' string
-  # EXAMPLE: new_string = "I nac eb na reenigne"
-  new_string = ""
-  new_string_index = 0
+  # Replacing each character in my_words and putting spaces between the 'smooshed_words' string. Iterating over and keeping track of three different things: my_words_index(keeps track of the current index value for my_words), smooshed_words_index(keeps track of the current index value of smooshed_words) and spaces_index(keeps track of the current index value of spaces array).
+  # EXAMPLE: my_words = "I nac eb na reenigne"
+  my_words_index = 0
   smooshed_words_index = 0
   spaces_index = 0
   while smooshed_words_index < smooshed_words.length
-    if new_string_index != spaces[spaces_index]
-      new_string << smooshed_words[smooshed_words_index]
-      new_string_index += 1
+    if my_words_index != spaces[spaces_index]
+      my_words[my_words_index] = smooshed_words[smooshed_words_index]
+      my_words_index += 1
       smooshed_words_index += 1
     else
-      new_string << " "
-      new_string_index += 1
+      my_words[my_words_index] = " "
+      my_words_index += 1
       spaces_index += 1
     end
   end
 
-  return new_string
+  return my_words
   end
 
-test = reverse_words("Engineer")
-puts "#{test}"
+# test = reverse_words("Engineer")
+# puts "#{test}"
