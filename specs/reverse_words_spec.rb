@@ -56,7 +56,7 @@ describe "reverse words" do
 
       test_string.must_equal "I evirts ot reenigne eht tsom tneiciffe .snoitulos"
     end
-
+    
     it "reverse words in a sentence with preceeding and trailing white spaces" do
       test_string = "   evol  "
 
