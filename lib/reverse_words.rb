@@ -1,3 +1,7 @@
+# Share and explain the time and space complexities for your solution.
+# The time complexity is O(n) because it's two loops that are linear so it's O(n) + O(n)
+# The space complexity is O(1) because it's outputting the same amount as input
+
 def reverse_word(string, array)
   i = string[0]
   j = string[-1]
