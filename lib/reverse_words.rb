@@ -20,7 +20,6 @@ def reverse_words(my_words)
       end
 
       my_words[i..k] = reverse_word(my_words[i..k])
-
       i =  index + 1
     end
   end
