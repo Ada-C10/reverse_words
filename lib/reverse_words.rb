@@ -24,19 +24,19 @@ require 'pry'
 # end
 
 ################################
-def reverse_word(word)
-  i = 0
-  j = word.length - 1
 
-  while i < j
+def reverse_one_word(word, index)
+
+  i = 0
+  while i < index
     first_letter = word[i]
-    last_letter = word[j]
+    last_letter = word[index]
 
     word[i] = last_letter
-    word[j] = first_letter
+    word[index] = first_letter
 
     i += 1
-    j -= 1
+    index -= 1
   end
 
   return word
@@ -44,22 +44,25 @@ end
 
 
 def reverse_words(my_words)
-
-    i = 0
-    j = my_words.length
-    
-    while i < j
-    if my_words[i] == " "
-
-      while i < count
-
-      end
-
-      reversed_words << reverse_word(word)
-    end
-
-    count += 1
+  if my_words.nil?
+     return nil
   end
 
-   return 1my_words
+  k = 0
+  l = my_words.length
+
+  reverse_one_word(my_words, l)
+
+    # while i < j
+    #   if my_words[i] == " " && i != 0
+    #     reverse_one_word(my_words, i)
+    #       while (i + 1) < j
+    #         reverse_one_word(my_words, j)
+    #       end
+    #     else
+    #       reverse_one_word(my_words, j)
+    #   end
+    #   i += 1
+    # end
+
 end
