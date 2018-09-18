@@ -9,7 +9,7 @@ def reverse_words(my_words)
   i = 0
   j = 0
 
-  while index < my_words.length
+  while index < my_words.length - 1
     i = index
 
     while my_words[index] != ' ' && my_words[index] != nil
