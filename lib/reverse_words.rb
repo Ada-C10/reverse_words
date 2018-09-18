@@ -42,12 +42,26 @@ def reverse_words(my_words)
   else
     i = 0
     while i < my_words.length
-      my_words[i] = reverse_string(my_words[i])
+      # my_words[i] = reverse_string(my_words[i])
+
+      if my_words[i] == nil || my_words[i].length <= 1
+        next
+      else
+        j = 0
+        word = my_words[i]
+        k = (word.length) - 1
+        while j < k
+          temp = word[j]
+          word[j] = word[k]
+          word[k]=temp
+          j += 1
+          k -= 1
+        end
+        my_words[i] = word
+
+      end
       i += 1
-
     end
-
     return my_words
   end
-  binding.pry
 end
