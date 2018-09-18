@@ -1,27 +1,27 @@
+require 'pry'
 # A method to reverse each word in a sentence, in place.
 def reverse_words(my_words)
   #split string into array of words
   return my_words if my_words.nil?
 
-  separated_words = Array.new
+  new_string = ""
   var = ""
+
   my_words.length.times do |x|
     if my_words[x] != " "
       var += my_words[x]
     else
-      separated_words << var
-      separated_words << my_words[x]
+      new_string += string_reverse(var)
+      new_string += my_words[x]
       var = ""
     end
   end
-  separated_words << var
+  new_string += string_reverse(var)
 
-  reversed_string = ""
-  separated_words.each do |word|
-    reversed_string += string_reverse(word)
+  my_words.length.times do |x|
+    my_words[x] = new_string[x]
   end
-  my_words = reversed_string
-  return my_words
+
 end
 
 def string_reverse(my_string)
@@ -42,6 +42,6 @@ def string_reverse(my_string)
   return my_string
 end
 
-test_string = "hello, world"
-
-print reverse_words(test_string)
+# test_string = "I like  tomatoes"
+#
+# print reverse_words(test_string)
