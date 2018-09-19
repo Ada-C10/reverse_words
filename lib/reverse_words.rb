@@ -1,3 +1,4 @@
+require 'pry'
 # A method to reverse each word in a sentence, in place.
 def reverse_words(my_words)
 
@@ -33,3 +34,27 @@ def string_reverse(my_string)
   return my_string
 
 end
+
+def split_words(my_words)
+
+  arr = []
+  start_break = 0
+  end_break = 0
+  [*1..(my_words.length-1)].each do |i|
+    if word_break?(my_words[i], my_words[i+1])
+      end_break = i
+      arr << my_words[start_break..end_break]
+      start_break = end_break + 1
+    end
+  end
+
+  return arr
+
+end
+
+def word_break?(char1, char2)
+  return (char1 == ' ' && char2 != ' ') || (char1 != ' ' && char2 == ' ')
+end
+
+splat = split_words('hello, world')
+puts splat
