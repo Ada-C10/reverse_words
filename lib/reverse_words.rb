@@ -3,7 +3,7 @@ require 'pry'
 def reverse_words(my_words)
 
   unless my_words.nil?
-    words = my_words.split(/\b/)
+    words = split_words(my_words)
 
     words.map! do |word|
       string_reverse(word)
@@ -40,13 +40,19 @@ def split_words(my_words)
   arr = []
   start_break = 0
   end_break = 0
-  [*1..(my_words.length-1)].each do |i|
+  words_end = my_words.length-1
+
+  words_end.times do |i|
     if word_break?(my_words[i], my_words[i+1])
+
       end_break = i
       arr << my_words[start_break..end_break]
       start_break = end_break + 1
     end
   end
+
+
+  arr << my_words[start_break..words_end]
 
   return arr
 
@@ -56,5 +62,8 @@ def word_break?(char1, char2)
   return (char1 == ' ' && char2 != ' ') || (char1 != ' ' && char2 == ' ')
 end
 
+splat = split_words('a b c d e f g h ? 1 2 4')
+puts "#{splat}"
+
 splat = split_words('hello, world')
-puts splat
+puts "#{splat}"
