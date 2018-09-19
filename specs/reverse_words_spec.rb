@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/reverse_words'
+require 'pry'
 
 describe "reverse words" do
   describe "basic tests" do
@@ -16,7 +17,7 @@ describe "reverse words" do
       test_string = "hello, world"
 
       reverse_words(test_string)
-
+      # binding.pry
       test_string.must_equal ",olleh dlrow"
     end
   end
