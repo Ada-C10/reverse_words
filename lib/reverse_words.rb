@@ -6,8 +6,6 @@ def reverse_words(my_words)
   end
 
   index = 0
-  i = 0
-  j = 0
 
   while index < my_words.length - 1
     i = index
