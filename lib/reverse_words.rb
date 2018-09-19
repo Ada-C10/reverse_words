@@ -21,7 +21,7 @@ def reverse_words(my_words)
   my_words.length.times do |x|
     my_words[x] = new_string[x]
   end
-
+  return my_words
 end
 
 def string_reverse(my_string)
