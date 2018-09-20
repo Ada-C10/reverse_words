@@ -1,5 +1,5 @@
 # A method to reverse each word in a sentence, in place.
-# Time Complexity: O(n) * O(3n) = O(n^2)
+# Time Complexity: the outside while loop only runs through once, inside is O(n)
 # Space Complexity: O(1), aside from a few variables up front and temp,
 # no additional space is used (swap is happening "in place")
 
@@ -12,6 +12,8 @@ def reverse_words(my_words)
   i = 0
   m = 0
   j = my_words.length
+
+  i += 1 while my_words == " "
 
   while i < j do
 
