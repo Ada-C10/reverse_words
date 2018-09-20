@@ -1,8 +1,36 @@
 # require 'pry'
 
 # A method to reverse each word in a sentence, in place.
+def reverse_words(sentence)
+  if sentence == nil || sentence.length < 2
+    return sentence
+  else
+    index = 0
+    start_index = 0
+    finish_index = 0
 
-# # method using start index and end index
+    while finish_index < sentence.length
+      if sentence[index] != " "
+        index += 1
+        finish_index += 1
+      elsif sentence[index] == " "
+        a = sentence[start_index]
+        b = sentence[finish_index]
+        while a < b
+          temp = sentence[b]
+          sentence[b] = sentence[a]
+          sentence[a] = temp
+          a += 1
+          b -= 1
+        end
+      end
+
+    end
+
+  end
+end
+
+# method using start index and end index
 # def reverse_words(sentence)
 #   if sentence == nil || sentence.length <= 1
 #     return sentence
@@ -15,37 +43,55 @@
 #     while start_index < sentence.length - 1
 #
 #       until sentence[word_index] == " "
-#         finish_index += 1
+#         if sentence[word_index] != " "
+#           finish_index += 1
+#           word << sentence[word_index]
+#         elsif sentence[word_index] == " "
+#           reverse_string(word)
 #
+#           new_start = sentence.length - finish_index
+#           new_end = sentence.length - start_index
+#
+#           index= 0
+#           until new_start == new_end
+#
+#             sentence[new_start] = word[index]
+#             new_start += 1
+#           end
+#
+#
+#         end
+#         word_index += 1
 #       end
-#       finish_index - start_index?
-#     end
 #
+#       start_index= finish_index - start_index
+#     end
+#   end
 # end
 
 #Method C with split and map
-def reverse_words(sentence)
-  if sentence == nil || sentence.length < 1
-    return sentence
-  else
-    split_sentence = sentence.split(" ")
-    reversed_words = split_sentence.map {|word| reverse_string(word)}
-    sentence = reversed_words.join(" ")
-    # binding.pry
-    return sentence
-  end
-
-  # Method C without split and map (second part)
-    # i = 0
-    # split_sentence.each do |word|
-    #  reversed_word = reverse_string(word)
-    #    # i = 0
-    #   reversed_word.length.times do |letter|
-    #     reversed_word[i] = sentence[i]
-  #     end
-  #   end
-  # end
- end
+# def reverse_words(sentence)
+#   if sentence == nil || sentence.length < 1
+#     return sentence
+#   else
+#     split_sentence = sentence.split(" ")
+#     reversed_words = split_sentence.map {|word| reverse_string(word)}
+#     sentence = reversed_words.join(" ")
+#     # binding.pry
+#     return sentence
+#   end
+#
+#   # Method C without split and map (second part)
+#     # i = 0
+#     # split_sentence.each do |word|
+#     #  reversed_word = reverse_string(word)
+#     #    # i = 0
+#     #   reversed_word.length.times do |letter|
+#     #     reversed_word[i] = sentence[i]
+#   #     end
+#   #   end
+#   # end
+#  end
 
 # def reverse_words(sentence)
 #   if sentence == nil || sentence.length <= 1
@@ -69,10 +115,11 @@ def reverse_words(sentence)
 #         ##???
 #          until sentence[word_index -1]
 #         ##???
-#         end
-#       end
-
-
+#          end
+#     end
+#   end
+# end
+# set index to number want, then while index < something?
 
 
   #   # reverse_string method
@@ -173,7 +220,3 @@ end
 #     end
 #     return my_words
 #   end
-# end
-
-
-# use .split?
