@@ -84,9 +84,9 @@ def reverse_words(my_words)
     reversed_string = string_reverse(my_words, start_index, end_index)
 #
   end
-binding.pry
+# binding.pry
   return reversed_string
 end
 
-example = reverse_words("Hello")
+example = reverse_words("Hello my name is Carly")
 puts "#{example}"
