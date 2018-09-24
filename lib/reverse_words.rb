@@ -19,13 +19,12 @@ def string_reverse (my_string, s_index, e_index)
     i += 1
     j -= 1
   end
-
-  return my_string
+  return
 end
 
 
 def reverse_words(my_words)
-  if my_words == nil
+  if (my_words == nil || my_words.length == 0)
     return my_words
   end
 
@@ -33,12 +32,12 @@ def reverse_words(my_words)
   j = my_words.length
 
   while i < j # will do the while loop until the end of my_words
-    while my_words[i] == " "
-      i + 1
+    while my_words[i] == " " && i < j
+      i += 1
     end
     s_index = i
 
-    while my_words[i] != " "
+    while my_words[i] != " " && i < j
       i += 1
     end
     e_index = i - 1
@@ -47,3 +46,5 @@ def reverse_words(my_words)
   end
   return my_words
 end
+
+# Time complexity is O(n) and Space complexity is O(1)
