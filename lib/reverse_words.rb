@@ -1,8 +1,8 @@
 #helper method
 def word_reverse(my_string, right_index, left_index)
 
-  return if (my_string.length == 0 || my_string == nil)
-  return my_string if (my_string.length == 1)
+  return if (my_string == nil || my_string.length == 0 )
+  return my_string if (left_index == right_index)
 
   # right = 0
   # left = string.length - 1
@@ -23,7 +23,7 @@ end
 # A method to reverse each word in a sentence, in place.
 def reverse_words(my_words)
 
-  return if (my_words.length == 0 || my_words == nil)
+  return if (my_words == nil || my_words.length == 0)
 
   counter = 0
 
@@ -35,7 +35,7 @@ def reverse_words(my_words)
 
     right_index = counter
 
-    while counter!= ' ' && counter < my_words.length
+    while my_words[counter]!= ' ' && counter < my_words.length
       counter += 1
     end
 
