@@ -1,18 +1,20 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/reverse_words'
+require 'pry'
 
 describe "reverse words" do
   describe "basic tests" do
     it "reverse each word in a sentence with one word" do
       test_string = "Engineer"
-
+      
       reverse_words(test_string)
 
       test_string.must_equal "reenignE"
     end
 
     it "reverse each word in a sentence with two words" do
+      skip
       test_string = "hello, world"
 
       reverse_words(test_string)
@@ -25,6 +27,7 @@ describe "reverse words" do
   describe "edge cases" do
     # if it's a string parameter, check for empty
     it "reverse each word in an empty sentence" do
+      skip
       test_string = ""
 
       reverse_words(test_string)
@@ -34,6 +37,7 @@ describe "reverse words" do
 
     # if the parameter is an object, check for nil
     it "nil object passed to reverse words" do
+      skip
       test_string = nil
 
       reverse_words(test_string)
@@ -42,6 +46,7 @@ describe "reverse words" do
     end
 
     it "reverse each single character word in a sentence with multiple words" do
+      skip
       test_string = "a b c d e f g h ? 1 2 4"
 
       reverse_words(test_string)
@@ -50,6 +55,7 @@ describe "reverse words" do
     end
 
     it "reverse each word in a sentence with multiple words of varying lengths" do
+      skip
       test_string = "I strive to engineer the most efficient solutions."
 
       reverse_words(test_string)
@@ -58,6 +64,7 @@ describe "reverse words" do
     end
 
     it "reverse words in a sentence with preceeding and trailing white spaces" do
+      skip
       test_string = "   evol  "
 
       reverse_words(test_string)
