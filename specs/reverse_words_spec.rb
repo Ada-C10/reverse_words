@@ -7,14 +7,14 @@ describe "reverse words" do
   describe "basic tests" do
     it "reverse each word in a sentence with one word" do
       test_string = "Engineer"
-      
+
       reverse_words(test_string)
 
       test_string.must_equal "reenignE"
     end
 
     it "reverse each word in a sentence with two words" do
-      skip
+  
       test_string = "hello, world"
 
       reverse_words(test_string)
@@ -27,7 +27,7 @@ describe "reverse words" do
   describe "edge cases" do
     # if it's a string parameter, check for empty
     it "reverse each word in an empty sentence" do
-      skip
+
       test_string = ""
 
       reverse_words(test_string)

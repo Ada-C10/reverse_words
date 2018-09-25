@@ -1,7 +1,7 @@
 #helper method
 def word_reverse(my_string, right_index, left_index)
 
-  return if (my_string.length == 0 || my_string = 0)
+  return if (my_string.length == 0 || my_string == nil)
   return my_string if (my_string.length == 1)
 
   # right = 0
@@ -9,7 +9,7 @@ def word_reverse(my_string, right_index, left_index)
   right = right_index
   left = left_index
   while right < left
-    left_container = my_string[right]
+    left_container = my_string[left]
     my_string[left] = my_string[right]
     my_string[right] = left_container
     right += 1
@@ -25,21 +25,22 @@ def reverse_words(my_words)
 
   return if (my_words.length == 0 || my_words == nil)
 
-  start = 0
+  counter = 0
 
-  while start < my_words.length
+  while counter < my_words.length
 
-    while my_words[start] == " "
-      start += 1
+    while my_words[counter] == ' ' && counter < my_words.length
+      counter += 1
     end
 
-    right_index = start
+    right_index = counter
 
-    left_index = right_index + 1
-
-    while my_words[left_index]!= " " && left_index < my_words.length
-      left_index += 1
+    while counter!= ' ' && counter < my_words.length
+      counter += 1
     end
+
+    left_index = counter - 1
+
 
     word_reverse(my_words, right_index, left_index)
   end
