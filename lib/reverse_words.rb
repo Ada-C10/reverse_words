@@ -9,7 +9,8 @@ def reverse_words(sentence)
     start_index = 0
     finish_index = 0
 
-    until finish_index == sentence.length
+    until finish_index > sentence.length
+      
       if sentence[index] != " "
         index += 1
         finish_index += 1
@@ -26,6 +27,7 @@ def reverse_words(sentence)
         index += 1
         finish_index += 1
         start_index = finish_index
+
       end
 
     end
