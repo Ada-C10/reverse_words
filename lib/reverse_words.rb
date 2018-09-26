@@ -9,13 +9,13 @@ def reverse_words(sentence)
     start_index = 0
     finish_index = 0
 
-    while finish_index < sentence.length
+    until finish_index == sentence.length
       if sentence[index] != " "
         index += 1
         finish_index += 1
       elsif sentence[index] == " "
         a = start_index
-        b = finish_index
+        b = finish_index - 1
         while a < b
           temp = sentence[b]
           sentence[b] = sentence[a]
