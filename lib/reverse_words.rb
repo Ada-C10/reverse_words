@@ -14,8 +14,8 @@ def reverse_words(sentence)
         index += 1
         finish_index += 1
       elsif sentence[index] == " "
-        a = sentence[start_index]
-        b = sentence[finish_index]
+        a = start_index
+        b = finish_index
         while a < b
           temp = sentence[b]
           sentence[b] = sentence[a]
@@ -23,10 +23,13 @@ def reverse_words(sentence)
           a += 1
           b -= 1
         end
+        index += 1
+        finish_index += 1
+        start_index = finish_index
       end
 
     end
-
+    return sentence
   end
 end
 
