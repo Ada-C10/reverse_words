@@ -17,7 +17,7 @@ def word_reverse(my_string, right_index, left_index)
   end
   return my_string
 end
-re
+
 def reverse_words(my_words)
 
   return if (my_words == nil || my_words.length == 0)
