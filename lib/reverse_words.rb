@@ -16,31 +16,25 @@ def string_reverse(my_string, beginning, ending)
 end
 
 def reverse_words(my_words)
-
-  if  my_words == nil || my_words.length < 2
-    return my_words
-  end
+  return if my_words == nil
 
   i = 0
-  j = 0
+  length = my_words.length
 
-  while j < my_words.length
-
-    i = j
-
-    while my_words[j] == " "
+  while i < length
+    while my_words[i] == ' ' && i < length
       i += 1
-      j += 1
     end
 
-    while my_words[j] != " " && my_words[j] != nil
-      j += 1
+    beginning = i
+
+    while my_words[i] != ' ' && i < length
+      i += 1
     end
 
-    string_reverse(my_words, i, j-1)
+    ending = i - 1
 
-    j += 1
+    string_reverse(my_words, beginning, ending)
   end
-
   return my_words
 end
