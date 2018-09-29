@@ -1,15 +1,17 @@
 # A method to reverse each word in a sentence, in place.
-def reverse_word(string, beginning, ending)
+def string_reverse(my_string, beginning, ending)
+  front_index = beginning
+  back_index = ending
 
-  i = beginning
-  j = ending
+  while front_index < back_index
+    front_value = my_string[front_index]
+    back_value = my_string[back_index]
 
-  while j > i
-    temp = string[i]
-    string[i] = string[j]
-    string[j] = temp
-    i += 1
-    j -= 1
+    my_string[front_index] = back_value
+    my_string[back_index] = front_value
+
+    front_index += 1
+    back_index -= 1
   end
 end
 
@@ -35,7 +37,7 @@ def reverse_words(my_words)
       j += 1
     end
 
-    reverse_word(my_words, i, j-1)
+    string_reverse(my_words, i, j-1)
 
     j += 1
   end
