@@ -38,3 +38,7 @@ def reverse_words(my_words)
   end
   return my_words
 end
+
+# time complexity: O(n) - goes through the loop n times, in this case it is through the length of my_words
+
+# space complexity: O(1) - the storage doesn’t grow with the size of the input, stays constant with the length of the string
