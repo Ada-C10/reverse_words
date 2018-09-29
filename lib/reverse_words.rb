@@ -43,22 +43,3 @@ def string_reverse(my_string, i, j)
   end
   return
 end
-
-
-# i = 0
-#   length = my_words.length
-#   while i < length # until end of input
-#     while my_words[i] == ' ' && i < length # accounting for preceeding spaces
-#       i += 1
-#     end
-#     start_index = i # start of word identified
-#
-#     while my_words[i] != ' ' && i < length # looking for end of word
-#       i += 1
-#     end
-#     end_index = i - 1 # word ends before the white space or at length-1
-#
-#     partial_reverse(my_words, start_index, end_index) # reverse the word
-#   end
-#   return
-# end
