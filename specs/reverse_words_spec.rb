@@ -1,6 +1,9 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/reverse_words'
+require 'pry'
+require 'minitest/pride'
+require 'minitest/skip_dsl'
 
 describe "reverse words" do
   describe "basic tests" do
