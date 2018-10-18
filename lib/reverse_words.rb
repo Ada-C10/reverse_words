@@ -9,14 +9,19 @@ def reverse_words(sentence)
     start_index = 0
     finish_index = 0
 
-    until finish_index == sentence.length + 1
-
-      if sentence[index] != " "
-        index += 1
-        finish_index += 1
-      elsif sentence[index] == " " || sentence[index] == nil
+    until finish_index > sentence.length
+      puts "finish index #{finish_index}"
+      puts "length #{sentence.length}"
+      if sentence[index] == " " || index + 1 == sentence.length
+        puts "swapping word"
         a = start_index
-        b = finish_index - 1
+        
+        if sentence[index] == " "
+          b = finish_index - 1
+        elsif index + 1 == sentence.length
+          b = finish_index
+        end
+
         while a < b
           temp = sentence[b]
           sentence[b] = sentence[a]
@@ -24,15 +29,21 @@ def reverse_words(sentence)
           a += 1
           b -= 1
         end
-
         index += 1
         finish_index += 1
         start_index = finish_index
+        puts index
+        puts finish_index
+        puts start_index
 
+      elsif sentence[index] != " "
+        index += 1
+        finish_index += 1
       end
-
     end
+
     return sentence
+
   end
 end
 
