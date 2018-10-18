@@ -21,7 +21,7 @@ describe "reverse words" do
     end
   end
 
-  # check for edge cases
+  #check for edge cases
   describe "edge cases" do
     # if it's a string parameter, check for empty
     it "reverse each word in an empty sentence" do
