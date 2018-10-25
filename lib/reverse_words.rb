@@ -10,8 +10,6 @@ def reverse_words(sentence)
     finish_index = 0
 
     until finish_index > sentence.length
-      puts "finish index #{finish_index}"
-      puts "length #{sentence.length}"
       if sentence[index] == " " || index + 1 == sentence.length
         a = start_index
 
