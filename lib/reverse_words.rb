@@ -3,38 +3,40 @@ def reverse_words(my_words)
   # raise NotImplementedError
   return my_words if my_words.nil? || my_words.empty?
 
-  my_words_start = 0
-  my_words_end = 0
-  index = 0
+  i = 0 # starting point of sentence
+  j = my_words.length # ending point of sentence
 
-  until index > my_words.length
-    if my_words[index] != " " && my_words[index] != nil
-      index += 1
-
-    else
-      my_words_end = index -1
-      index += 1
-      while my_words_start < my_words_end
-        temp = my_words[my_words_start] # swap with temporary variable
-        my_words[my_words_start] = my_words[my_words_end]
-        my_words[my_words_end] = temp
-        my_words_start += 1
-        my_words_end -= 1
-      end
-      my_words_start = index
-      my_words_end = index
+  while i < j
+    while my_words[i] == " " && i < j
+      i += 1
     end
+
+    word_start = i # starting point of next word in sentance
+
+    while my_words[i] != " " && i < j
+      i += 1
+    end
+
+    word_end = i - 1 # end point of word in sentence
+
+    word_reverse(my_words, word_start, word_end)
   end
-  return my_words
+  return
 end
 
+# helper method to reverse a word
+def word_reverse(my_words, word_start, word_end)
+  return nil if my_words == nil || my_words.length == 0
 
-# reversed_string = ''
-#
-# i = 0
-# while i < my_words.length
-#   reversed_string = my_words[i] + reversed_string
-#   i += 1
-# end
-#
-# return reversed_string
+  i = word_start # first index of character word word
+  j = word_end # last index of character in word
+
+  while i < j
+    temp = my_words[i] # swap with temporary variable
+    my_words[i] = my_words[j]
+    my_words[j] = temp
+    i += 1
+    j -= 1
+  end
+  return
+end
